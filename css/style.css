@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/*Globales*/
+:root{
+    --fuenteHeading:'PT Sans',sans-serif;
+    --fuenteParrafos:'Open sans',sans-serfi;
+    --ColorsPrimary:#684030;
+    --White:#FFF;
+    --Black:#0000;
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*1rem =10px*/
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+body{
+    font-family: var(--fuenteParrafos);
+    font-size: 1.7rem;
+    line-height: 2;
+}
+.contenedor {
+    max-width: 120rem;
+    width:90%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+h1,h2,h3,h4{
+    font-family: var(--fuenteHeading);
+    margin: 0;
+    
+}
+h1{
+    font-size: 4.8rem;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 3.2rem;
+}
+h4{
+    font-size: 2.8rem;
+}
+img{
+    max-width: 100%;
+    height: 100%;
+}
+li{
+    list-style: none;
+}
+
+/*FIN Globales*/
+
+/*Utilidades*/
+.no-margin{
+    margin: 0;
+}
+.no-padding{
+    padding: 0;
+}
+.center-text{
+    text-align: center;
+}
+.mg-2rem{
+    margin: 2rem 0rem;
+}
+/*Fin Utilidades*/
+
+/*Estilos*/
+.header{
+    background-image: url(../img/banner.jpg);
+    height: 60rem;
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center center;
+}
+.subtitulo_title{
+    background-color: #FFF;
+    
+}
+.header__texto{
+    text-align: center;
+    color: var(--White);
+    padding-top: 5rem;
+}
+
+.logo__title{
+    color: var(--White);
+    font-weight: 200;
+}
+.logo__title span {
+    font-weight: 600;
+}
+@media screen and (max-width:450px) {
+    .container__logo__Menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
+@media screen and (min-width:769px) {
+    .logo_nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .Menu_h{
+        display: none;
+    }
+    .contenedor_nav{
+        display: flex;
+    }
+    .link_nav{
+        padding: 5px 20px;
+        margin: 0px 5px;
+        color: #FFF;
+        font-weight: 600;
+    }
+    .link_nav:hover{
+        color: rgb(255, 10, 10);
+        font-weight: 600;
+    } 
+}
+
+@media screen and (max-width:769px) {
+    
+    .container__logo__Menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+    .logo__title{
+        padding: 0 20px;
+    }
+    .Menu_h{
+        display: block;
+    }
+    .contenedor {
+        max-width: 120rem;
+        width:95%;
+        margin: 0 auto;
+    }
+    .nav_movil{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.551);
+        transition: all ease-in-out 1s;
+        height: 0;
+        
+    }
+    
+    .link_nav{
+        padding: 5px 20px;
+        margin: 0px 5px;
+        color: #FFF;
+        font-weight: 600;
+        min-width: 100%;
+        text-align: center;
+        visibility: hidden;
+    }
+    .link_nav:hover{
+        color: rgb(255, 10, 10);
+        font-weight: 600;
+    } 
+    .mostrar{
+        height: auto;
+        
+    }
+    .visible{
+        visibility: visible;
+        
+    }
+    
+}
+
+/*--------------------Estilos para el contenedor principal----------------------*/
+.btn_b{
+    background-color: rgb(0, 0, 0);
+    font-size: 2rem;
+    font-weight: 600;
+    color: #FFF;
+    padding: 1rem 3rem;
+    margin: 2rem 0;
+}
+.Contenido__Principal{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+}
+    .articulos__blog{
+        margin-bottom: 2rem;
+        border-bottom: 1px solid grey;
+    }
+    .articulos__blog:last-of-type{
+        border: none;
+    }
+    .articulos__blog p{
+        margin-bottom: 2rem;
+    }
+    .btn--secundario{
+        background-color:#78451a;
+    }
+    .cursos__link{
+        border-bottom: 1px solid grey;
+    }
+    .cursos__link:last-of-type{
+        border: none;
+    }
+@media screen and (min-width:1024px) {
+    /*Este estilo utiliza para que se quede estatico*/
+    .siderbar {
+        position: sticky;
+        top: 0; /* o cualquier otro valor que desees */
+        width: auto; /* o cualquier otro valor que desees */
+        height: 100vh; /* o cualquier otro valor que desees */
+        overflow-y: auto; /* para que el sidebar tenga un scroll propio */
+        padding: 2rem;
+      }
+}
+@media screen and (max-width:1023px) {
+    .Contenido__Principal{
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+}
+
+
+.Pie{
+    width: 100%;
+    background-color: #000000;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #FFF;
+}
+.Contenedor_Logo_pie{
+    height: 16rem;
+    display: flex;
+    align-items: center;
+}
+.derechos_pie{
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.margin_4rem{
+    margin-top: 4rem;
+}
+
+.Nombre_autor{
+    color: rgb(21, 203, 21);
+    padding: 5px 5px;
+}
+
+
+/*Estilos para page nosotros*/
+.contenedor_nosotros_principal{
+    max-height: 75rem;
+    margin-top: 2rem;
+}
+.gridi{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    height: 100%;
+}
+.title_nosotros{
+    text-align: center;
+    margin: 2rem 0rem;
+}
+.contenedor_imagen_nosotros img{
+    background-image: url(../img/contacto.jpg);
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+@media screen and (max-width:768px) {
+    .contenedor_nosotros_principal{
+        max-height: 100rem;
+        margin-top: 2rem;
+    }
+    .gridi{
+        display: flex;
+        flex-direction: column;
+    }
+    .contenedor_imagen_nosotros{
+        min-height: auto;
+    }
+}
+
+
+/*----------------------ESTILOS CURSOS----------------*/
+.cursos{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 3rem 0rem;
+    border-bottom:2px solid #b0aeae ;
+}
+.cursos:last-of-type{
+    border: none;
+}
+
+@media screen and (max-width:768px) {
+
+    .cursos{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 3rem 0rem;
+        border-bottom:2px solid #b0aeae ;
+    }
+    .Contenedor_Logo_pie{
+        justify-content: center;
+    }
+    .derechos_pie{
+        font-size: 1.2rem;
+    }
+}
+
+
+/*----------------Contacto-------------*/
+
+.contactanosForm{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.columna-12{
+    width: 100%;
+}
+.columna-10{
+    width: 85%;
+    margin: 0 auto;
+}
+.formulario{
+    margin-top: -10rem;
+    background-color: #FFF;
+    padding: 5rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+}
+.formulario .campo .label_cont{
+    flex: 0 0 10rem;
+}
+.formulario .campo .input_cont{
+    flex: 1;
+    border: 1px solid rgb(157, 154, 154);
+    padding: 1rem;
+}
+.textarea_t{
+    height: 20rem;
+}
+.enviar{
+    display: flex;
+    justify-content: end;
+}
+.input_enviar{
+    padding: 1rem 2rem;
+    background-color: #000000;
+    color: #FFF;
+    font-size: 2rem;
+    font-weight: 600;
+    border-radius: 1rem;
+    
+}
+@media screen and (max-width:768px) {
+    .formulario{
+        margin-top: 0rem;
+        background-color: #FFF;
+        padding: 5rem;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+    .columna-10{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .enviar{
+        display: flex;
+        justify-content: start;
+    }
+    .input_enviar{
+        padding: 1rem 2rem;
+        background-color: #000000;
+        color: #FFF;
+        font-size: 2rem;
+        font-weight: 600;
+        border-radius: 1rem;
+        width: 100%;
+        
+    }
+    .campo{
+        flex-direction: column;
+        gap: 1rem;
+        height: auto;
+    }
+    .formulario .campo .label_cont{
+        flex:1;
+    }
+    .textarea_t{
+        min-height: 20rem;
+    }
+}
